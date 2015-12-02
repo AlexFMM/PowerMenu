@@ -15,6 +15,16 @@ namespace PowerMenu
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(KeyEvent); this.KeyPreview = true;
+        }
+
+        private void KeyEvent(object sender, KeyEventArgs e) //Keyup Event 
+        {
+            if (e.KeyCode == Keys.F9)
+            {
+                MessageBox.Show("Function F9");
+            }
         }
     }
 }
